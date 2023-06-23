@@ -1,8 +1,10 @@
 function isAnagram(s: string, t: string): boolean {
- const arrS:Array<string> = s.split('').sort()
- const arrT:Array<string> = t.split('').sort()
- if (JSON.stringify(arrS) === JSON.stringify(arrT)){
+ const sortedS:string = s.split("").sort().join("")
+ const sortedT:string = t.split("").sort().join("")
+ if (sortedS === sortedT){
+
  return true
  }
+ 
 return false
 };
